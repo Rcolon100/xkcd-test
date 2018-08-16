@@ -21,7 +21,7 @@ function getComic(){
 function getDateAndTime() {
   const date = new Date()
   const dateTime = date.toDateString() + ' ' + date.toLocaleTimeString()
-  document.getElementById('dateTime').innerHTML = dateTime
+  document.getElementById('timestamp').innerHTML = dateTime
 }
 
 document.onreadystatechange = function () {
