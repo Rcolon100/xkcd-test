@@ -2,30 +2,56 @@
 <html>
   <head>
     <title>Xkcd Test</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body >
     <div class="main">
       <div class="centralContent">
-        <form id="searchBar" method="get" action="http://www.google.com/search">
+        <div id=#searchBar>
+<style>
+          input[type=Search] {
+          width: 130px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+          background-image: url('searchicon.png');
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+          margin-right: 20px;
+        }
 
-        <!-- <div style="border:2px dotted black;padding:4px;width:15em;"> -->
-        <table border="0" align="center" cellpadding="0">
-        <tr><td>
-        <input type="text"   name="q" size="25" style="color:#808080;"
-        maxlength="255" placeholder="Search Google"
-        onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
-        <input type="submit" value="Go!" />
-        </td></tr>
-        </table>
-        <!-- </div> -->
+      input[type=Search]:focus {
+          width: 100%;
+        }
+</style>
+          <form method="get" action="http://www.google.com/search">
+            <input type="search" name="q" placeholder="Search..">
 
-        </form>
+          <!-- <div style="border:2px dotted black;padding:4px;width:15em;"> -->
+          <!-- <table border="0" align="center" cellpadding="0">
+          <tr><td>
+          <input type="text"   name="q" size="25" style="color:#808080;"
+          maxlength="255" placeholder="Search Google"
+          onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+          <input type="submit" value="Go!" />
+          </td></tr>
+          </table> -->
+          <!-- </div> -->
+
+          </form>
+        </div>
+
 
         <img id='image'>
       </div>
       <div id="topMenu">
         <p id="timestamp">
-          8/16/2018 12:35pm
+
         </p>
 
       </div>
