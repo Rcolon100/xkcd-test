@@ -9,11 +9,12 @@
 	"default_title": "xkcd test"
 	},
 
-
 	"chrome_url_overrides" : {
 		"newtab": "newtab.html"
 	},
 
-	"permissions": ["activeTab"]
+	"content_security_policy": "script-src 'self' 'sha256-WOdSzz11/3cpqOdrm89LBL2UPwEU9EhbDtMy2OciEhs='",
+
+	"permissions": ["activeTab", "https://www.google.com/*" ]
 }
 

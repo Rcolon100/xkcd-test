@@ -1,12 +1,10 @@
 
 
-
-
 function getComic(){
-	let comicNum = 1;
+	
+
+	let comicNum = Math.floor(Math.random() * 2032);
 	let url = `https://xkcd.now.sh/${comicNum}`
-	//console.log({comicNum});
-	//console.log({url});
 
 	return fetch(url)
 	.then((result) => {
@@ -18,14 +16,8 @@ function getComic(){
 	}).catch((error) => {
 		console.log({error})
 	})
-//	console.log({comicInfo});
-//	return comicInfo;
 }
 
-// $(document).ready(function() {
-// 	console.log('installed')
-// 	getComic();
-//   });
 
 document.onreadystatechange = function () {
     if (document.readyState === "interactive") {
@@ -38,4 +30,7 @@ document.onreadystatechange = function () {
 					console.log({img: info.img});
 				});
     }
+
+    document.getElementById("search").addEventListener("click", myFunction);
+
 }
