@@ -1,7 +1,7 @@
 
 
 function getComic(){
-	
+
 
 	let comicNum = Math.floor(Math.random() * 2032);
 	let url = `https://xkcd.now.sh/${comicNum}`
@@ -30,7 +30,7 @@ document.onreadystatechange = function () {
         console.log('installed')
 
 		const comicInfo = getComic().then((info) => {
-			
+
 
 			const image = document.getElementById('image');
 			console.log({image});
@@ -39,6 +39,6 @@ document.onreadystatechange = function () {
 			console.log({img: info.img});
 		});
     }
-    let searchBar = document.getElementsByClass('searchBar')
+    let searchBar = document.getElementById('searchBar')
 	// searchBar.opacity = 1;
 }
