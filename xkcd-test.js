@@ -18,19 +18,27 @@ function getComic(){
 	})
 }
 
+function getDateAndTime() {
+  const date = new Date()
+  const dateTime = date.toDateString() + ' ' + date.toLocaleTimeString()
+  document.getElementById('dateTime').innerHTML = dateTime
+}
 
 document.onreadystatechange = function () {
     if (document.readyState === "interactive") {
         // initApplication();
         console.log('installed')
-				const comicInfo = getComic().then((info) => {
-					const image = document.getElementById('image');
-					console.log({image});
-					image.setAttribute('src', info.img);
-					console.log({img: info.img});
-				});
+
+		const comicInfo = getComic().then((info) => {
+			
+
+			const image = document.getElementById('image');
+			console.log({image});
+			getDateAndTime()
+			image.setAttribute('src', info.img);
+			console.log({img: info.img});
+		});
     }
-
-    document.getElementById("search").addEventListener("click", myFunction);
-
+    let searchBar = document.getElementsByClass('searchBar')
+	// searchBar.opacity = 1;
 }
